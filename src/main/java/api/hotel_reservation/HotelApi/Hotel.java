@@ -1,5 +1,7 @@
 package api.hotel_reservation.HotelApi;
 
+import java.util.List;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,5 +21,8 @@ public class Hotel {
     private String Description;
     private String Category;
     private String Rating;
+    private List<String> Tags;
+    private Object Address;
+    private List<Rooms> Rooms;
 
 }

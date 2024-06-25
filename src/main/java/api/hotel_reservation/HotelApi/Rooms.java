@@ -1,5 +1,7 @@
 package api.hotel_reservation.HotelApi;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -16,4 +18,6 @@ public class Rooms {
     private int BaseRate;
     private String BedOptions;
     private int SleepsCount;
+    private boolean SmokingAllowed;
+    private List<String> Tags;
 }
