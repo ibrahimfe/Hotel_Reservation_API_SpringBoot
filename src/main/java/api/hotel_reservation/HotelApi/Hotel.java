@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Hotel {
     @Id
     private ObjectId id;
-    private String HotelId;
+    private String hotelId;
     private String HotelName;
     private String Description;
     private String Category;
