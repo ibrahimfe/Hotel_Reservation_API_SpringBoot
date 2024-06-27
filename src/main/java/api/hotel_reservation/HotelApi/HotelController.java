@@ -3,7 +3,6 @@ package api.hotel_reservation.HotelApi;
 import java.util.List;
 import java.util.Optional;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,9 +24,8 @@ public class HotelController {
 
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<Hotel>> getOneHotel(@PathVariable ObjectId id) {
-        return new ResponseEntity<Optional<Hotel>>(service.oneHotel(id), HttpStatus.OK);
-
+    @GetMapping("/{hotelId}")
+    public ResponseEntity<Optional<Hotel>> getOneHotelByHotelId(@PathVariable String hotelId) {
+        return new ResponseEntity<Optional<Hotel>>(service.oneHotelByHotelId(hotelId), HttpStatus.OK);
     }
 }
