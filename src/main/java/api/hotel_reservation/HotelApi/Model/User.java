@@ -1,4 +1,4 @@
-package api.hotel_reservation.HotelApi;
+package api.hotel_reservation.HotelApi.Model;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;

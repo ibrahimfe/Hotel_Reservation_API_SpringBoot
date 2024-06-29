@@ -1,49 +1,44 @@
+# Spring Boot API dengan MongoDB
 
-# Hotel Reservation API (Spring Boot)
-## Description
+## Deskripsi
+Project ini merupakan sebuah API yang dibangun menggunakan framework Spring Boot dengan bahasa pemrograman Java. API ini menggunakan database MongoDB untuk menyimpan dan mengelola data hotel. API menyediakan dua endpoint utama, yaitu:
 
-This project contains the backend API for a hotel reservation web application. It provides RESTful endpoints for managing hotel reservations.
-Technologies
+- `/api/hotels` untuk mendapatkan semua data hotel
+- `/api/hotels/{hotelId}` untuk mendapatkan data hotel spesifik berdasarkan ID
 
-1. Spring Boot
-2. Spring Data JPA
-3. Hibernate
-4. Jackson
+## Prasyarat
+Untuk menjalankan project ini, Anda membutuhkan:
 
-## Getting Started
+- Java Development Kit (JDK) versi 8 atau yang lebih baru
+- IDE (misalnya IntelliJ IDEA atau Eclipse)
+- MongoDB yang sudah terinstal dan berjalan
 
-Prerequisites:
+## Instalasi
+1. Klon repository ini ke komputer Anda.
+2. Buka project menggunakan IDE pilihan Anda.
+3. Konfigurasi file `application.properties` dengan detail koneksi database MongoDB Anda.
+4. Jalankan project dengan perintah `mvn spring-boot:run` atau menggunakan fitur "Run" dari IDE Anda.
 
-    - Java Development Kit (JDK)
-    - Gradle
+## Penggunaan
+Setelah project berjalan, Anda dapat mengakses endpoint API menggunakan alat seperti Postman atau dengan membuat permintaan HTTP langsung dari kode Anda.
 
-## To run the application:
+### Mendapatkan Semua Data Hotel
+Untuk mendapatkan semua data hotel, buat permintaan GET ke endpoint `/api/hotels`. Sebagai contoh:
 
-    - Clone the repository.
-    - Run ./gradlew bootRun command.
-    - The API will be available on localhost:8080.
+```
+GET http://localhost:8080/api/hotels
+```
 
-## API Endpoints
+Respons akan berupa array JSON yang berisi semua data hotel.
 
-    - /hotels: Get a list of all available hotels.
-    - /hotels/{id}: Get details of a specific hotel.
-    - /hotels/{id}/reservations: Create a new hotel reservation.
-    - /reservations: Get a list of all reservations.
+### Mendapatkan Data Hotel Spesifik
+Untuk mendapatkan data hotel spesifik berdasarkan ID, buat permintaan GET ke endpoint `/api/hotels/{hotelId}`, dengan `{hotelId}` diganti dengan ID hotel yang diinginkan. Sebagai contoh:
 
-## Documentation
+```
+GET http://localhost:8080/api/hotels/12345
+```
 
-    API documentation is currently in progress.
-    More detailed documentation will be available soon.
+Respons akan berupa objek JSON yang berisi data hotel dengan ID yang diberikan.
 
-## Contributing
-
-Contributions are welcome! Please contact the owner for more information.
-License
-
-This project is licensed under the Apache License 2.0.
-Contact
-
-    Owner: Ibrahim
-    Email: ibrahiimm.f@gmail.com
-    Github: ibrahimfe
-
+## Lisensi
+Project ini dilisensikan di bawah MIT License. Lihat file LICENSE untuk detail lebih lanjut.
